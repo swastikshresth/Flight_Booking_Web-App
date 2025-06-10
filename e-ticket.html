@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="px-md-5">
+                <button class="navbar-toggler" type="button" style="border: none;outline:none;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse px-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house catg"></i>&nbsp;&nbsp;Home</a>
+                        </li>
+
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link active" href=""><i class="fa-solid fa-plane-up rotate catg"></i>&nbsp;&nbsp;Flights</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bed catg"></i>&nbsp;&nbsp;Hotels</a>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link" href=""><i class="fa-solid fa-taxi catg"></i>&nbsp;&nbsp;Cab</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bus catg"></i>&nbsp;&nbsp;Bus</a>
+                        </li>
+
+                        <!-- <div class="d-lg-none d-md-none d-sm-block">
+                            <button type="button" class=" btn-sm btn login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                        </div> -->
+                    </ul>
+
+                    <div class="d-xl-block d-lg-none d-md-none d-none" style="margin-left:630px;">
+                        <button type="button" class=" btn-sm btn btn-outline-primary login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+
+    <section class="px-2">
+        <div class="row mt-4 px-md-5">
+            <div class="col-lg-9 mb-3">
+                <div class="card">
+                    <div class="card-body px-lg-5">
+                        <p class="e-tkt mt-2">E-Ticket</p>
+                        <p class="booked-id mb-0">Hi Rahul, thank you for booking with us. We wish you a pleasant journey.</p>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="card ">
+                                    <div class="card-body e-card py-4 px-md-4">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <p class="term">Booking Confirmed</p>
+                                                <p class="cnfrm-details mb-2">Delhi to Singapore <span class="via">via Mumbai</span> </p>
+                                                <p class="trip-dls">Multi City &nbsp;&nbsp;<span>Wed, 28 June</span></p>
+                                                <p class="mb-0 mt-5" style="font-size:13px;"><span class="term">Booking ID:</span> 4681179065BQHSHDGBIFDYHU &nbsp;&nbsp;<span class="term">(Booked on 21 June 2023)</span></p>
+                                            </div>
+                                            <div class="col-md-7 text-md-end">
+                                                <img src="assets/images/aeroplane.svg" style="height: 140px;" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5 mb-4">
+                            <div class="col-12">
+                                <p class="term">Booking Confirmed</p>
+                                <p class="cnfrm-details mb-2">Delhi to Mumbai</p>
+                                <p class="term">Wed, 28 June<span class="mx-4">1 stop</span>15h 55m duration</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body e-card py-4 px-md-4">
+                                        <div class="row px-md-5">
+                                            <div class="col-md-4" style="border-right: 1px solid #E0E0E0;">
+                                                <div class="d-flex align-items-center pt-0 pb-0">
+                                                    <div class="">
+                                                        <img src="assets/images/indigo.png" class="img-fluid flight-img mb-0" alt="IndiGo">
+                                                    </div>
+                                                    <div class="plain-details px-md-4">
+                                                        <p class="mb-0" style="font-size:12px;font-weight: 600;">IndiGo</p>
+                                                        <small class="term1">6E-267</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3 ">
+                                                    <div class="col-lg-7 sc-lg">
+                                                        <div class="d-flex py-1 pnr-styling">
+                                                            <p class="mb-0 mx-2">PNR</p>
+                                                            <p class="mb-0" style="border-left: 1px solid gray;">&nbsp;&nbsp;</p>
+                                                            <p class="mb-0"><a href="">Q237GX</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 px-3 ">
+                                                <div class="d-flex  mt-3">
+                                                    <div class="departure-timing text-end">
+                                                        <h5 class="cnfrm-details mb-0">DEL 19:25</h5>
+                                                        <p class="term">Tue, 28 Feb 2024</p>
+                                                        <p class="term">Delhi - Indira Gandhi International Airport Terminal-3
+                                                        </p>
+                                                    </div>
+                                                    <div class="plain-hour mx-md-5 mx-sm-3">
+                                                        <img src="assets/images/clock.svg" class="img-fluid ms-2" alt="">
+                                                        <p class="term1 text-center">1h 15min <br>Economy</p>
+                                                    </div>
+                                                    <div class="departure-timing text-start">
+                                                        <h5 class="cnfrm-details mb-0">MUM 19:25</h5>
+                                                        <p class="term">Tue, 28 Feb 2024</p>
+                                                        <p class="term">Delhi - Indira Gandhi International Airport Terminal-3
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="dot1 mt-4"></p>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Flexi-Plus</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Economy</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="mb-0 baggage">Baggage - <img src="assets/images/bag.svg" alt=""><strong>7 Kgs (1 piece only)</strong><span>Cabin</span>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="mb-0 baggage"><img src="assets/images/bag.svg" alt=""><strong>15 Kgs (1 piece only)</strong><span>Cabin</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="dot1 mt-3"></p>
+
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Traveller</p>
+                                                        <p class="mb-0 bold-sm">Rahul Kumar <span class="term">(Adult)</span></p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Seat</p>
+                                                        <p class="mb-0 bold-sm">7A</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="term mb-0">Meal</p>
+                                                        <p class="mb-0 bold-sm">Veg Biryani Combo</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="term mb-0">E Ticket No</p>
+                                                        <p class="mb-0 bold-sm">Q237XH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-5">
+                            <div class="col-12 py-3 plan-color">
+                                <p class="mb-0 plan-change text-center">Change of planes:<span class=""><b>2h 25m Layover in Gwalior</b></span></p>
+                            </div>
+                        </div>
+                        <div class="row mt-5 mb-4">
+                            <div class="col-12">
+                                <p class="term">Booking Confirmed</p>
+                                <p class="cnfrm-details mb-2">Delhi to Mumbai</p>
+                                <p class="term">Wed, 28 June<span class="mx-4">1 stop</span>15h 55m duration</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body e-card py-4 px-md-4">
+                                        <div class="row px-md-5">
+                                            <div class="col-md-4" style="border-right: 1px solid #E0E0E0;">
+                                                <div class="d-flex align-items-center pt-0 pb-0">
+                                                    <div class="">
+                                                        <img src="assets/images/indigo.png" class="img-fluid flight-img mb-0" alt="IndiGo">
+                                                    </div>
+                                                    <div class="plain-details px-md-4">
+                                                        <p class="mb-0" style="font-size:12px;font-weight: 600;">IndiGo</p>
+                                                        <small class="term1">6E-267</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3 ">
+                                                    <div class="col-lg-7 sc-lg">
+                                                        <div class="d-flex py-1 pnr-styling">
+                                                            <p class="mb-0 mx-2">PNR</p>
+                                                            <p class="mb-0" style="border-left: 1px solid gray;">&nbsp;&nbsp;</p>
+                                                            <p class="mb-0"><a href="">Q237GX</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 px-3 ">
+                                                <div class="d-flex  mt-3">
+                                                    <div class="departure-timing text-end">
+                                                        <h5 class="cnfrm-details mb-0">DEL 19:25</h5>
+                                                        <p class="term">Tue, 28 Feb 2024</p>
+                                                        <p class="term">Delhi - Indira Gandhi International Airport Terminal-3
+                                                        </p>
+                                                    </div>
+                                                    <div class="plain-hour mx-md-5 mx-sm-3">
+                                                        <img src="assets/images/clock.svg" class="img-fluid ms-2" alt="">
+                                                        <p class="term1 text-center">1h 15min <br>Economy</p>
+                                                    </div>
+                                                    <div class="departure-timing text-start">
+                                                        <h5 class="cnfrm-details mb-0">MUM 19:25</h5>
+                                                        <p class="term">Tue, 28 Feb 2024</p>
+                                                        <p class="term">Delhi - Indira Gandhi International Airport Terminal-3
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="dot1 mt-4"></p>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Flexi-Plus</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Economy</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="mb-0 baggage">Baggage - <img src="assets/images/bag.svg" alt=""><strong>7 Kgs (1 piece only)</strong><span>Cabin</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="mb-0 baggage"><img src="assets/images/bag.svg" alt=""><strong>15 Kgs (1 piece only)</strong><span>Cabin</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="dot1 mt-3"></p>
+
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Traveller</p>
+                                                        <p class="mb-0 bold-sm">Rahul Kumar <span class="term">(Adult)</span></p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <p class="term mb-0">Seat</p>
+                                                        <p class="mb-0 bold-sm">7A</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="term mb-0">Meal</p>
+                                                        <p class="mb-0 bold-sm">Veg Biryani Combo</p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <p class="term mb-0">E Ticket No</p>
+                                                        <p class="mb-0 bold-sm">Q237XH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-2 ">
+                                <p class="e-tkt pt-1">Fare Breakup:</p>
+                            </div>
+                            <div class="col-10 align-items-center">
+                                <hr class="hlf-border">&nbsp</hr>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 bold-sm">Base Fare:</p>
+                                    <p class="mb-0 bold-sm">Rs 4620</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 bold-sm">Airline Fuel Charge:</p>
+                                    <p class="mb-0 bold-sm">Rs 420</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 bold-sm">CUTE fee:</p>
+                                    <p class="mb-0 bold-sm">Rs 460</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 bold-sm">Passenger Service fee:</p>
+                                    <p class="mb-0 bold-sm">Rs 620</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 bold-sm">Other Charges:</p>
+                                    <p class="mb-0 bold-sm">Rs 462</p>
+                                </div>
+                                <hr>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 bold-sm">Total Fare:</p>
+                                    <p class="mb-0 bold-sm">Rs 9860</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8 text-md-end">
+                                <img src="assets/images/cloud-plane.svg" class="img-fluid" style="height: 180px;" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-2">
+                                <p class="e-tkt pt-1">Important:</p>
+                            </div>
+                            <div class="col-10 align-items-center">
+                                <hr class="hlf-border">&nbsp</hr>
+                            </div>
+                            <ul class="px-4">
+                                <li class="term1">Passengers are required to bring this Itinerary/Receipt along with an official ID with photo issued by the government or known corporations upon entering the terminal.</li>
+                                <li class="term1">The airline may contact the card holder or the passenger for verification of their payment, and in case the airline suspects or has a reason to believe that the ticket(s) purchased were made fraudulently, the airline may
+                                    cancel the reservation made by the passenger.</li>
+                                <li class="term1">The airline may contact the card holder or the passenger for verification of their payment, and in case the airline suspects or has a reason to believe that the ticket(s) purchased were made fraudulently, the airline may
+                                    cancel the reservation made by the passenger.</li>
+                                <li class="term1">
+                                    Carriage and other facilities provided by the carrier are subject to their Terms and Condition. We are not liable for missing any facility of the carrier.
+                                </li>
+                                <li class="term1">To cancel tickets in less than 6 hours prior to departure, please contact the airlines directly. We are not at all responsible for any losses on receiving the request in such cases.</li>
+                                <li class="term1">Recheck your baggage with your respective airline before travelling for hassle-free travel experience.</li>
+                                <li class="term1">Baggage more than specified units is subject to a charge to be paid at the airport during check-in. (Baggage allowance differ for infants)</li>
+                                <li class="term1">Partial cancellation is not allow for Round-trip fares.</li>
+                                <li class="term1">
+                                    Partial cancellation is not allow for tickets booked under Friends & Family fares.
+                                </li>
+                                <li class="term1">
+                                    The No Show refund* should be collected within 90 days from date of departure. Group Booking Rules will be applicable if passengers are 9 or more in numbers. Company is not responsible for any delay or cancellation of flights from airline's end.
+                                </li>
+                                <li class="term1">Kindly contact the airline at least 24 Hours before to reconfirm your flight details giving reference of Airline PNR Number.</li>
+                                <li class="term1">
+                                    All reservations done through our website are as per the terms and conditions of the concerned airlines. Any modification, cancellation and refund of the airline tickets shall be strictly as per the policy of the concerned airlines and we deny all liability
+                                    in connection thereof.
+                                </li>
+                                <li class="term1">
+                                    Unaccompanied Child: Children below the age of 12 will not be accepted for carriage unless they are accompanied by a person of at least 18 years of age. Such child/children must be seated next to the accompanying adult. The accompanying adult is solely
+                                    responsible for the well-being of the child/children traveling together with him/her. This also includes ensuring that seats are booked to ensure child/children and an accompanying adult are seated together.
+                                </li>
+                                <li class="term1">
+                                    To review your baggage allowance, please contact Airline well before your flight.
+                                </li>
+                                <li class="term1">
+                                    All time indicated are the local times (in 24 hrs. format) at the relevant airport.
+                                </li>
+                                <li class="term1">
+                                    Company is not responsible for any delay or cancellation of flights from airline's end
+                                </li>
+                                <li class="term1">
+                                    Cancellation and date change fees are applicable before departure and per passenger basis. In case of amendment, along with the airline and EMT fees, you will also have to pay fare difference, if any
+                                </li>
+                                <li class="term1">
+                                    Kindly ensure that you have the relevant visa, transit visa (if applicable), immigration clearance and travel with a passport, with a validity of at least 6 months as on date of travel. (For international travel)
+                                </li>
+                                <li class="term1">
+                                    Some airports have multiple terminals catering to domestic/international flights, please check the departure/arrival terminal of your flight with the airlines before reaching airport.
+                                </li>
+                                <li class="term1">
+                                    Convenience fee is non-refundable in case of ticket cancellation by the user, or flight cancellation by the airline.
+                                </li>
+                                <li class="term1">
+                                    The amount paid for the cancellation protection will not be refunded under this offer at any circumstances.
+                                </li>
+                                <li class="term1">
+                                    Some countries have restrictions for arrival passengers including transit/stop-over. It is requested to check the country and airline regulatory websites for entry/transit restrictions to the destination. It is the sole responsibility of the traveler
+                                    to ensure entry/transit eligibility to the destination. If a passenger is denied boarding by the airline or entry to a country by the airport, EaseMyTrip doesn’t accept any liability in this regard. Also, all the penalties
+                                    need to be borne by passenger in this case.
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-3">
+                                <p class="e-tkt pt-1">Change in Plans:</p>
+                            </div>
+                            <div class="col-9 align-items-center">
+                                <hr class="hlf-border">&nbsp</hr>
+                            </div>
+                            <p class="e-tkt mt-3">Delhi to Mumbai</p>
+                            <div class="row ">
+                                <div class="col-12">
+                                    <div class="card ">
+                                        <div class="card-body e-card py-4 px-md-4">
+                                            <div class="row">
+                                                <div class="col-md-6" style="border-right:1px solid #E0E0E0;">
+                                                    <p class="can-fees mb-0">Cancellation Fees &nbsp;&nbsp;<span class="term">(For Adult)</span></p>
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-9">
+                                                            <p class="can-fees1 mb-0">4 days to 365 days before departure</p>
+                                                            <p class="term1 mt-1">Before 24 Jun 2023, 23:25 hrs</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <p class="text-primary trvl-amt">Rs 6882/ Traveller</p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0 mb-0">
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-9">
+                                                            <p class="can-fees1 mb-0">4 days to 365 days before departure</p>
+                                                            <p class="term1 mt-1">Before 24 Jun 2023, 23:25 hrs</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <p class="text-primary trvl-amt">Rs 6882/ Traveller</p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0 mb-0">
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-9">
+                                                            <p class="can-fees1 mb-0">4 days to 365 days before departure</p>
+                                                            <p class="term1 mt-1">Before 24 Jun 2023, 23:25 hrs</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <p class="text-primary trvl-amt">Rs 6882/ Traveller</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <p class="can-fees mb-0">Cancellation Fees &nbsp;&nbsp;<span class="term">(For Adult)</span></p>
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-9">
+                                                            <p class="can-fees1 mb-0">4 days to 365 days before departure</p>
+                                                            <p class="term1 mt-1">Before 24 Jun 2023, 23:25 hrs</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <p class="text-primary trvl-amt">Rs 6882/ Traveller</p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0 mb-0">
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-9">
+                                                            <p class="can-fees1 mb-0">4 days to 365 days before departure</p>
+                                                            <p class="term1 mt-1">Before 24 Jun 2023, 23:25 hrs</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <p class="text-primary trvl-amt">Rs 6882/ Traveller</p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0 mb-0">
+                                                    <div class="row mt-4">
+                                                        <div class="col-md-9">
+                                                            <p class="can-fees1 mb-0">4 days to 365 days before departure</p>
+                                                            <p class="term1 mt-1">Before 24 Jun 2023, 23:25 hrs</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <p class="text-primary trvl-amt">Rs 6882/ Traveller</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <p class="e-tkt pt-1 mb-0">Submit a Refund Request:</p>
+                            </div>
+                            <div class="col-8 align-items-center">
+                                <hr class="hlf-border mb-0">&nbsp</hr>
+                            </div>
+                            <div class="col-12">
+                                <p class="term">Please let us know if you would like us to contact the airline for your refund. Our agents will initiate theprocess and this might take up to 30 days. Choose the reason for your refund request:</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <div class="card ">
+                                    <div class="card-body e-card py-4 px-md-4">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5 class="sub-title mb-0" style="cursor:pointer;"><b>I cancelled directly with the airline</b></h5>
+                                                    <a href=""> <i class="fa-solid fa-chevron-right text-primary"></i></a>
+                                                </div>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5 class="sub-title mb-0" style="cursor:pointer;"><b>My flight was cancelled/delayed</b></h5>
+                                                    <a href=""><i class="fa-solid fa-chevron-right text-primary"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-2">
+                                <p class="e-tkt pt-1 mb-0">Contact Us:</p>
+                            </div>
+                            <div class="col-10 align-items-center">
+                                <hr class="hlf-border mb-0">&nbsp</hr>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card ">
+                                    <div class="card-body e-card py-4 px-md-4">
+                                        <div class="row">
+                                            <div class="col-md-6" style="border-right:1px solid #E0E0E0;">
+                                                <div class="d-flex align-items-center pt-0 pb-0">
+                                                    <div class="">
+                                                        <img src="assets/images/indigo.png" class="img-fluid flight-img mb-0" alt="IndiGo">
+                                                    </div>
+                                                    <div class="plain-details px-md-3">
+                                                        <p class="mb-0" style="font-size:12px;font-weight: 600;">IndiGo Support</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mt-3">
+                                                    <i class="fa-solid fa-phone text-muted"></i> &nbsp&nbsp;
+                                                    <a href="tel:0124-6173838">0124-6173838, 0124-4973838</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center pt-0 pb-0">
+                                                    <div class="our-support">
+                                                    </div>
+                                                    <div class="plain-details px-md-3">
+                                                        <p class="mb-0" style="font-size:12px;font-weight: 600;">Our Support</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-3">
+                                                    <i class="fa-solid fa-phone text-muted"></i> &nbsp&nbsp;
+                                                    <a href="tel:1232134253534">1232134253534</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- -----------second column---------------- -->
+            <div class="col-lg-3 mb-3">
+                <div class="card mb-4">
+                    <div class="px-4 py-3 d-flex">
+                        <img src="assets/images/tag.svg" class="img-fluiud" alt="">
+                        <p class="mt-0 mb-0 card-title ms-3">Ticket Options</p>
+                    </div>
+                    <hr class="mt-0 mb-0 ">
+                    <div class="px-4 py-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0"><b>Download</b></h5>
+                            <a href="" class="sub-title mb-0"><i class="fa-solid fa-arrow-right text-primary"></i></a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between my-3">
+                            <h5 class="sub-title mb-0" style="cursor:pointer;"><b>E-Ticket</b></h5>
+                            <a href="" class="sub-title mb-0"><i class="fa-solid fa-arrow-right text-primary"></i></a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="sub-title mb-0" style="cursor:pointer;"><b>Share Ticket</b></h5>
+                            <a href="" class="sub-title mb-0"><i class="fa-solid fa-arrow-right text-primary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="px-4 py-3 d-flex">
+                        <img src="assets/images/tag.svg" class="img-fluiud" alt="">
+                        <p class="mt-0 mb-0 card-title ms-3">Fare Breakup</p>
+                    </div>
+                    <hr class="mt-0 mb-0 ">
+                    <div class="px-4 py-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0" style="cursor: pointer;" onclick="basefareFun()">Base Fare &nbsp;<i class="fa-solid fa-angle-down fa-xs "></i></h5>
+                            <h5 class="sub-title mb-0">₹ 5,000</h5>
+                        </div>
+                        <div class="my-3 d-none" id="base-fare">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 1,000</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 2,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between my-2 mb-3">
+                            <h5 class="sub-title mb-0" style="cursor: pointer;" onclick="taxesFun()">Taxes &amp; Surcharges &nbsp;<i class="fa-solid fa-angle-down fa-xs "></i></h5>
+                            <h5 class="sub-title mb-0">₹ 5,000</h5>
+                        </div>
+                        <div class="my-3 d-none" id="taxes">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 1,000</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 2,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0"><b>Total Amount</b></h5>
+                            <h5 class="sub-title mb-0"><b>₹ 10,000</b></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <script>
+        function basefareFun() {
+            document.getElementById('base-fare').classList.toggle('d-none')
+        }
+
+        function taxesFun() {
+            document.getElementById('taxes').classList.toggle('d-none')
+        }
+    </script>
+</body>
+
+</html>

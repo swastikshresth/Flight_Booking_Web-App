@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="assets/lib/select2/select2.min.css">
+
+    <link rel="stylesheet" href="assets/lib/datepicker/daterangepicker.css">
+    <script src="assets/js/sl.js" defer></script>
+
+    <!-- ---------test---------- -->
+    <link href="https://fonts.googleapis.com/css?family=Coda|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="lr-space">
+                <button class="navbar-toggler" type="button" style="border: none;outline:none;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse px-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house catg"></i>&nbsp;&nbsp;Home</a>
+                        </li>
+
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link active-icons" href=""><i class="fa-solid fa-plane-up rotate catg"></i>&nbsp;&nbsp;Flights</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bed catg"></i>&nbsp;&nbsp;Hotels</a>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link" href=""><i class="fa-solid fa-taxi catg"></i>&nbsp;&nbsp;Cab</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bus catg"></i>&nbsp;&nbsp;Bus</a>
+                        </li>
+
+                        <!-- <div class="d-lg-none d-md-none d-sm-block">
+                            <button type="button" class=" btn-sm btn login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                        </div> -->
+                    </ul>
+
+                    <div class="d-xl-block d-lg-none d-md-none d-none" style="margin-left:673px;">
+                        <button type="button" class=" btn-sm btn btn-outline-primary login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="form-section pt-3 py-5" style="background-image:url(assets/images/bg-img.svg);">
+        <div class="container py-2 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row py-2 pb-4">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+                                <div class="form-group d-flex align-items-center mb-3">
+                                    <div class="country py-1 px-2">
+                                        <input type="radio" name="country" id="oneway-check">
+                                        <label for="" class="">One Way</label>
+                                    </div>
+                                    <div class="country ms-4 py-1 px-2">
+                                        <input type="radio" name="country" id="roundtrip-check">
+                                        <label for="" class="">Round Trip</label>
+                                    </div>
+                                    <div class="country ms-4 py-1 px-2">
+                                        <input type="radio" name="country" id="multicity-check">
+                                        <label for="" class="">Multi-city</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-1" style="border: 1px solid #E7E7E7;background-color: #ffff;border-radius: 5px;">
+                                    <div class="col-lg-6 px-3">
+                                        <div class="row">
+                                            <div class="col-sm-5 py-3">
+                                                <label for="">From</label>
+                                                <div class="d-flex align-items-center inputDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa-solid fa-plane-departure icons"></i>
+                                                    <input type="text" class="form-control" id="myInput" autocomplete="off" style="border: none;outline: none;background-color:transparent;" placeholder="Enter City or airport" onkeyup="filterFunction()">
+                                                </div>
+                                                <div class="mt-3 dropdown-menu dropdown-menu-xl dropdown-height" id="myDropdown">
+                                                    <div class="row" onclick="fromValue()">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-departure icons"></i>&nbsp;&nbsp;<span id="state1">Delhi (DEL)</span></span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" onclick="fromValue()">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"><i class="fa-solid fa-plane-departure icons"></i>&nbsp;&nbsp;<span id="state2">Mumbai</span></span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 py-3 d-flex align-items-center swap" onclick="swapFun()">
+                                                <div class="d-flex align-items-center justify-content-center" style="width:30px;height: 30px;border-radius:50%;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                    <i class="fa-solid fa-arrow-right-arrow-left icons"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 py-3" style="border-right: 1px solid #E7E7E7;">
+                                                <label for="">To</label>
+                                                <div class="d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa-solid fa-plane-arrival icons"></i>
+                                                    <input type="text" class="form-control" id="destination" style="border:none;outline: none;background-color:transparent;" placeholder="Enter City or airport" onkeyup="filterFunction1()">
+                                                </div>
+                                                <div class="mt-3 dropdown-menu dropdown-menu-xl dropdown-height" id="myDropdown1">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Delhi (DEL)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Mumbai (BOM)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Delhi (DEL)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" onclick="fromValue('Bangalore (BANG)')">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Bangalore (BANG)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Delhi (DEL)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" onclick="fromValue('Mumbai (BOM)')">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Mumbai (BOM)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Delhi (DEL)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" onclick="fromValue('Bangalore (BANG)')">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Bangalore (BANG)</span>
+                                                                <small class="px-2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a class="dropdown-icon-item text-start" href="#">
+                                                                <span class="px-2 ps-3"> <i class="fa-solid fa-plane-arrival icons"></i>&nbsp;&nbsp;Delhi (DEL)</span>
+                                                                <small class="px2 ps-3 d-block">Indira Gandhi International Airport</small>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="row">
+                                            <div class="col-md-4 py-3" style="border-right: 1px solid #E7E7E7;">
+                                                <label for="">Departure Date</label>
+                                                <div class="d-flex align-items-center" onclick="checkedFun()">
+                                                    <img src="assets/images/calender.svg" class="img-fluid" alt="">
+
+                                                    <input id="departure-date" type="text" class="form-control" style="border: none;" autocomplete="off" placeholder="Departure Date">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 py-3" style="border-right: 1px solid #E7E7E7;">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <label for="">Return</label>
+                                                    <i class="fa-solid fa-xmark cross-return d-none" id="cross" onclick="clearreturnFun()"></i>
+                                                </div>
+                                                <div class="d-flex align-items-center" onclick="rcheckedFun()">
+                                                    <img src="assets/images/calender.svg" class="img-fluid" alt="">
+                                                    <input id="return-date" type="text" class="form-control" style="border: none;" autocomplete="off" placeholder="Return Date" onclick="selectFun()">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label for="" class="mt-3">Travellers & Class</label>
+                                                <div class="dropdown d-flex align-items-center">
+                                                    <img src="assets/images/seat.svg" class="img-fluid" style="height: 18px;" alt="">
+                                                    <a class="btn  dropdown-toggle" href="#" role="button" onclick="passengerFun()" id="totalPassenger" data-bs-toggle="dropdown" aria-expanded="false">
+                                                              1 Traveller <br><span  id="class-seat" class="ms-3">Economy</span>
+                                                     </a>
+                                                </div>
+                                                <div class="p-2 mt-3 card d-none" id="travelSection" class="passengercard" style="position: absolute;z-index:200;width: 260px;">
+                                                    <div class="row mb-0">
+                                                        <div class="col mb-0 d-flex align-items-center justify-content-between">
+                                                            <div class="traveller">
+                                                                <a class="dropdown-icon-item text-start align-items-center" href="#">
+                                                                    <!-- <span class="px-2"><b>4&nbsp;Adult</b></span> -->
+                                                                    <span class="px-2"><b><span id="adult-count">1</span>&nbsp;Adult</b>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="square align-items-center d-flex ">
+                                                                <div class="decrease-1">
+                                                                    <span class=" decrease px-2" onclick="adultdecrFun()">-</span>
+                                                                </div>
+                                                                <div class="increase-1 mx-2">
+                                                                    <span class="increase px-2" onclick="adultincrFun()">+</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-2 mb-0">
+                                                    <div class="row mb-0">
+                                                        <div class="col d-flex align-items-center justify-content-between">
+                                                            <div class="traveller">
+                                                                <a class="dropdown-icon-item text-start align-items-center d-inline-block" href="#">
+                                                                    <p class=" d-flex px-2"><b><span id="child-count">0</span>&nbsp;Child</b> <span class="mx-2 text-muted">2-12 Years</span></p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="square align-items-center d-flex ">
+                                                                <div class="decrease-1">
+                                                                    <span class=" decrease px-2" onclick="childdecrFun()">-</span>
+                                                                </div>
+                                                                <div class="increase-1 mx-2">
+                                                                    <span class="increase px-2" onclick="childincrFun()">+</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0 mb-0">
+                                                    <div class="col d-flex align-items-center justify-content-between">
+                                                        <div class="traveller">
+                                                            <a class="dropdown-icon-item text-start align-items-center d-inline-block" href="#">
+                                                                <p class="d-flex px-2"><b><span id="infant-count">0</span>&nbsp;Infant</b> <span class="mx-2 text-muted">Below 2 Years</span></p>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="square align-items-center d-flex">
+                                                            <div class="decrease-1">
+                                                                <span class=" decrease px-2" onclick="infantdecrFun()">-</span>
+                                                            </div>
+                                                            <div class="increase-1 mx-2">
+                                                                <span class="increase px-2" onclick="infantincrFun()">+</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <hr class="mt-0 mb-0">
+                                                    <div class="form p-2">
+                                                        <div class="form-group">
+                                                            <div class="form-check 1">
+                                                                <input type="radio" class="form-check-input" checked="" name="travel" style="border:1px solid gray" onclick="economyFun()">
+                                                                <label for="economy" class="form-check-label  text-form" id="economy">Economy</label>
+                                                            </div>
+                                                            <div class="form-check 2">
+                                                                <input type="radio" class="form-check-input" name="travel" style="border:1px solid gray" onclick="premiumEcoFun()">
+                                                                <label for="premiumEco" class="form-check-label  text-form" id="premiumEco">Premium</label>
+                                                            </div>
+
+                                                            <div class="form-check 2">
+                                                                <input type="radio" class="form-check-input" name="travel" style="border:1px solid gray" onclick="businessFun()">
+                                                                <label for="business" class="form-check-label  text-form" id="business">Business</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btnSection text-md-end px-1 pb-3">
+                                                        <button type="button" class="btn btn-sm btn-danger text-md-end" onclick="passengerFun()">Done</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a href="flight-detaiils.html" class="btn search-btn mx-auto" style="margin-bottom:-50px;">SEARCH FLIGHTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="date-picker-modal" class="hidden-2" style="z-index: 100;">
+                <div id="date-picker-top-bar">
+                    <div id="date-picker-previous-month" class="date-picker-change-month">&lsaquo;</div>
+                    <div id="date-picker-month">December 17</div>
+                    <div id="date-picker-next-month" class="date-picker-change-month">&rsaquo;</div>
+                </div>
+                <div id="date-picker-exit">&times;</div>
+                <table id="date-picker">
+                    <tr id="date-picker-weekdays">
+                        <th>S</th>
+                        <th>M</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>T</th>
+                        <th>F</th>
+                        <th>S</th>
+                    </tr>
+                    <!-- Actual calendar rows added dynamically -->
+                    <!--<tr class="date-picker-calendar-row"></tr>-->
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="bg-light">
+        <div class="container py-4 mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h4 class="text-center">Offers For You</h4>
+                            <ul class="nav nav-underline" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="active-tab" data-bs-toggle="tab" href="#active" role="tab" aria-controls="active" aria-expanded="true" aria-selected="true">
+                                        <span>All</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="link1-tab" data-bs-toggle="tab" href="#link1" role="tab" aria-controls="link1" aria-selected="false" tabindex="-1">
+                                        <span>Bank Offers</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="link2-tab" data-bs-toggle="tab" href="#link2" role="tab" aria-controls="link2" aria-selected="false" tabindex="-1">
+                                        <span>Flights</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link " id="link3-tab" data-bs-toggle="tab" href="#active" role="tab" aria-controls="active" aria-expanded="true" aria-selected="true">
+                                        <span>Hotels</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="link4-tab" data-bs-toggle="tab" href="#link1" role="tab" aria-controls="link1" aria-selected="false" tabindex="-1">
+                                        <span>Cabs</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="link5-tab" data-bs-toggle="tab" href="#link2" role="tab" aria-controls="link2" aria-selected="false" tabindex="-1">
+                                        <span>Bus</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content tabcontent-border p-3 mt-3" id="myTabContent">
+                                <div role="tabpanel" class="tab-pane fade active show" id="active" aria-labelledby="active-tab">
+                                    <div class="wrapper">
+                                        <i id="left" class="fa-solid fa-angle-left"></i>
+                                        <ul class="carousel1">
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/h-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/h-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/h-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/h-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/h-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/h-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <i id="right" class="fa-solid fa-angle-right"></i>
+                                    </div>
+                                    <div class="wrapper mt-4">
+                                        <i id="left" class="fa-solid fa-angle-left"></i>
+                                        <ul class="carousel1">
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/f-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/f-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/f-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/f-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/f-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4 space-bottom d-flex align-items-center justify-content-between">
+                                                            <img src="assets/images/f-1.svg" class="img-fluid" alt="">
+                                                        </div>
+
+                                                        <div class="col-md-8">
+                                                            <div class="">
+                                                                <h6 class="tittle"><b>For your first hotel booking </b></h6>
+                                                                <p class="text-muted mb-0"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Till 30th Sept’23</p>
+                                                            </div>
+                                                            <a href="" class="">View Details</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <i id="right" class="fa-solid fa-angle-right"></i>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="link1" role="tabpanel" aria-labelledby="link1-tab">
+
+                                </div>
+                                <div class="tab-pane fade" id="link2" role="tabpanel" aria-labelledby="link2-tab">
+
+                                </div>
+                                <div class="tab-pane fade" id="link3" role="tabpanel" aria-labelledby="link1-tab">
+
+                                </div>
+                                <div class="tab-pane fade" id="link3" role="tabpanel" aria-labelledby="link2-tab">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        $(function() {
+            $('#departure-date').datepicker({
+                numberOfMonths: 2,
+                showAnim: "fold",
+                showButtonPanel: true,
+                minDate: 0, // Set the minimum date to today (0 means the current date)
+                onSelect: function(date) {
+                    $('#return-date').datepicker('option', 'minDate', date);
+                    // Optionally, you can add more logic here based on the selected departure date
+                }
+            });
+
+            $('#return-date').datepicker({
+                numberOfMonths: 2,
+                showAnim: "fold",
+                showButtonPanel: true,
+                minDate: 0,
+                onSelect: (function() {
+                    let startDate = $('#departure-date').datepicker('getDate');
+                    let endDate = $(this).datepicker('getDate');
+                    if (startDate && endDate && startDate > endDate) {
+                        alert("Return date cannot be less than departure date");
+                        $(this).val(''); // Clear the return date field
+                    }
+                })
+            });
+        });
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/redmond/jquery-ui.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js"></script>
+    <script>
+        function passengerFun() {
+            document.getElementById("travelSection").classList.toggle("d-none");
+
+        }
+
+
+        function passengerFun1() {
+            adult = document.getElementById('adult-count').innerHTML;
+            infant = document.getElementById('infant-count').innerHTML;
+            child = document.getElementById('child-count').innerHTML;
+            document.getElementById('totalPassenger').innerHTML = parseInt(infant) + parseInt(adult) + parseInt(child) + " " + `Traveller <br> <span  id="class-seat" class="ms-3">Economy</span>`;
+        }
+
+        // -------------------------------Increament - Decreament function----------------------------------4
+
+        // ---------------adult-----------------
+        function adultincrFun() {
+            var adult = document.getElementById('adult-count').innerHTML;
+            var adultcount = parseInt(adult);
+            if (adultcount >= 1) {
+                adultcount++;
+                document.getElementById('adult-count').innerHTML = adultcount;
+            }
+            // document.getElementById('totalPassenger').innerHTML = adultcount + " " + "Passengers";
+            passengerFun1();
+        }
+
+        function adultdecrFun() {
+            var adult = document.getElementById('adult-count').innerHTML;
+            var adultcount = parseInt(adult);
+            if (adultcount >= 2) {
+                adultcount--;
+                document.getElementById('adult-count').innerHTML = adultcount;
+            }
+            passengerFun1();
+        }
+        // ---------------adult-----------------
+        // -- -- -- -- -- -- -- - child-- -- -- -- -- -- -- -- -
+        function childincrFun() {
+            var child = document.getElementById('child-count').innerHTML;
+            var childcount = parseInt(child);
+            if (childcount >= 0) {
+                childcount++;
+                document.getElementById('child-count').innerHTML = childcount;
+            }
+            passengerFun1()
+        }
+
+        function childdecrFun() {
+            var child = document.getElementById('child-count').innerHTML;
+            var childcount = parseInt(child);
+            if (childcount >= 1) {
+                childcount--;
+                document.getElementById('child-count').innerHTML = childcount;
+            }
+            passengerFun1()
+        }
+        // ---------------child-----------------
+
+        // ---------------infant-----------------
+        function infantincrFun() {
+            var infant = document.getElementById('infant-count').innerHTML;
+            var infantcount = parseInt(infant);
+            if (infantcount >= 0) {
+                infantcount++;
+                document.getElementById('infant-count').innerHTML = infantcount;
+            }
+            passengerFun1()
+        }
+
+        function infantdecrFun() {
+            var infant = document.getElementById('infant-count').innerHTML;
+            var infantcount = parseInt(infant);
+            if (infantcount >= 1) {
+                infantcount--;
+                document.getElementById('infant-count').innerHTML = infantcount;
+            }
+            passengerFun1()
+        }
+
+
+        // ---------------Infant-----------------
+
+        // -------------------------------Increament - Decreament function----------------------------------
+        // --------------------------------Filter Function---------------------------
+        function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+        function filterFunction1() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("destination");
+
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown1");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+        // -----------------------------End Filter Function-------------------------------
+
+        // function fromValue(fromdata) {
+        //     var inpFrom = document.getElementById('myInput');
+        //     inpFrom.value = fromdata;
+        // }
+        function fromValue() {
+            var inpValue = document.getElementById('myInput')
+            var inpFrom = document.getElementById('state2').innerHTML;
+            inpValue.value = inpFrom;
+        }
+
+        // --------------------------swap function----------------------------
+        function swapFun() {
+            var fromValue = document.getElementById('myInput').value;
+            var toValue = document.getElementById('destination').value;
+            var swap = fromValue;
+            fromValue = toValue;
+            toValue = swap;
+            a = fromValue;
+            b = toValue;
+            document.getElementById('myInput').value = a;
+            document.getElementById('destination').value = b;
+        }
+
+
+        //    -------------------- checked fun --------------------
+        var oneWay = document.getElementById('oneway-check');
+        var roundTrip = document.getElementById('roundtrip-check');
+
+        // function checkedFun() {
+        //     oneWay.checked = "true";
+        // }
+
+        function rcheckedFun() {
+            var roundTrip = document.getElementById('roundtrip-check');
+            roundTrip.checked = "true";
+        }
+
+        function clearreturnFun() {
+            document.getElementById('return-date').value = "Return Date";
+            document.getElementById('cross').classList.toggle('d-none')
+            oneWay.checked = "true";
+        }
+
+
+        function selectFun() {
+            document.getElementById('cross').classList.remove('d-none')
+        }
+
+        function economyFun() {
+            var economy = document.getElementById('economy').innerHTML;
+            document.getElementById('class-seat').innerHTML = economy;
+        }
+
+        function businessFun() {
+            var business = document.getElementById('business').innerHTML;
+            document.getElementById('class-seat').innerHTML = business;
+        }
+
+        function premiumEcoFun() {
+            var premiumEco = document.getElementById('premiumEco').innerHTML;
+            document.getElementById('class-seat').innerHTML = premiumEco;
+        }
+    </script>
+    <!--
+    <script>
+        $(document).mouseup(function(e) {
+            var container = $(".passengercard");
+            if (!container.is(e.target) &&
+                container.has(e.target).length === 0) {
+                container.hide();
+            }
+        });
+    </script> -->
+    <!-- <script src="assets/lib/datepicker/moment.min.js"></script>
+    <script src="assets/lib/datepicker/daterangepicker.js"></script>
+    <script src="assets/js/custom.js"></script> -->
+
+</body>
+
+</html>
