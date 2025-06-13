@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- <script src="assets/js/script.js" defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="assets/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/lib/datepicker/daterangepicker.css">
+    <script src="assets/js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="lr-space">
+                <button class="navbar-toggler" type="button" style="border: none;outline:none;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse px-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house catg"></i>&nbsp;&nbsp;Home</a>
+                        </li>
+
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link active" href=""><i class="fa-solid fa-plane-up rotate catg"></i>&nbsp;&nbsp;Flights</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bed catg"></i>&nbsp;&nbsp;Hotels</a>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link" href=""><i class="fa-solid fa-taxi catg"></i>&nbsp;&nbsp;Cab</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bus catg"></i>&nbsp;&nbsp;Bus</a>
+                        </li>
+
+                        <!-- <div class="d-lg-none d-md-none d-sm-block">
+                            <button type="button" class=" btn-sm btn login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                        </div> -->
+                    </ul>
+
+                    <div class="d-xl-block d-lg-none d-md-none d-none" style="margin-left:630px;">
+                        <button type="button" class=" btn-sm btn btn-outline-primary login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <section class="mt-4">
+        <div class="row px-md-5">
+            <div class="col-lg-6 mb-4">
+                <div class="card w-100 bg-light-info overflow-hidden shadow-none mb-4">
+                    <div class=" position-relative">
+                        <div class="row">
+                            <div class="col-sm-8 pt-4">
+                                <div class="d-flex align-items-center justify-content-between ps-3 pt-2">
+                                    <div>
+                                        <p class="show-revenue mb-0">
+                                            This Month’s Revenue
+                                        </p>
+                                        <h5 class=""><b>₹1,00,000</b></h5>
+                                    </div>
+                                    <div>
+                                        <h6>
+                                            Average from last month
+                                        </h6>
+                                        <p class="term mb-0"><span style="color: #F6704D;">-2%,</span> than last month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="welcome-bg-img mb-0 text-end">
+                                    <img src="assets/images/wallet.svg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h6><b>658</b></h6>
+                                        <p class="mb-0 bold-sm">New Bookings</p>
+                                        <p class="mb-0 term1"><span style="color: #40E364;;">+0.2%,</span> than last month</p>
+                                    </div>
+                                    <div class="icon-b icon-box1 d-flex align-items-center justify-content-center">
+                                        <img src="assets/images/clockcal.svg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h6><b>658</b></h6>
+                                        <p class="mb-0 bold-sm">New Bookings</p>
+                                        <p class="mb-0 term1"><span style="color: #40E364;;">+0.2%,</span> than last month</p>
+                                    </div>
+                                    <div class="icon-box3 icon-b d-flex align-items-center justify-content-center">
+                                        <img src="assets/images/people.svg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h6><b>658</b></h6>
+                                        <p class="mb-0 bold-sm">New Bookings</p>
+                                        <p class="mb-0 term1"><span style="color: #40E364;;">+0.2%,</span> than last month</p>
+                                    </div>
+                                    <div class=" icon-b icon-box3 d-flex align-items-center justify-content-center">
+                                        <img src="assets/images/ind-rupee.svg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title1 mb-0">Revenue %</p>
+                        <canvas id="myChart" class="mt-0" height="240px" style="margin-top:-100px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b>December</b></h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b>Bookings</b></h6>
+                        <div class="mt-4">
+                            <p class="mb-2 term">Travel date</p>
+                            <h5 class=""><b>5 days</b></h5>
+
+                            <div class="d-flex align-items-center">
+                                <p class="mb-0 bold-sm">01.09.2021</p>
+                                <i class="fa-solid fa-arrow-right-arrow-left icons mx-3"></i>
+                                <p class="mb-0 bold-sm">05.09.2021</p>
+                            </div>
+                            <hr>
+                            <p class="mb-2 term">People</p>
+                            <h5><b>2 <span class="bold-sm">/adults</span></b></h5>
+
+                            <div>
+                                <img src="assets/images/people1.svg" class="img-fluid" alt="">
+                                <span class="term">Marta, Artur</span>
+                            </div>
+                            <hr>
+                            <p class="mb-2 term">Destination</p>
+                            <h5 class=""><b>Rome</b></h5>
+
+                            <div class="d-flex align-items-center">
+                                <img src="assets/images/Poland Flag.svg" class="img-fluid" alt="">
+                                <p class="mb-0 bold-sm ms-2">Poland</p>
+                                <i class="fa-solid fa-arrow-right-arrow-left icons mx-3"></i>
+                                <img src="assets/images/Italy Flag.svg" class="img-fluid" alt="">
+                                <p class="mb-0 bold-sm ms-2">Italy</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/images/flight.svg" class="img-fluid" alt="">
+                                <p class="term1 mb-0 ms-2">2 h 25 min flight</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b>Sales</b></h6>
+                        <canvas id="myChart1" style="width: 100%; max-width: 600px; display: block;" width="600" height="300" class="chartjs-render-monitor"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div class="container my-5">
+        <form action="">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>APPLICATION TYPE</label>
+                        <select class="form-select form-select-lg">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>APPLICATION TYPE</label>
+                        <select class="form-select form-select-lg">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div> -->
+
+
+    <!-- .....pie graph----------- -->
+    <script>
+        const xValues = ["Flight", "Hotel", "Other"];
+        const yValues = [55, 49, 44];
+        const barColors = [
+            "#0bb277",
+            "#735bfa",
+            "#fa8647",
+            "#0bb277",
+            "#735bfa",
+            "#fa8647",
+        ];
+
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                // title: {
+                //     display: true,
+                //     text: "World Wide Wine Production 2018"
+                // }
+                labels: [{
+                    render: 'label',
+                    position: 'outside'
+                }, {
+                    render: 'percentage'
+                }]
+            }
+        });
+    </script>
+
+    <!-- ......Bar-Graph---------- -->
+
+    <script>
+        var sValues = ["set-Z", "set-Y", "set-S", "sdet-F", "set-G", "set-L", "set-J", "setk"];
+        var tValues = [55, 49, 44, 24, 15, 55, 49, 44, 24, 15, ];
+        var barColor = ["#0E18AB", "#1194F3", "#04BC57", "#0E18AB", "#1194F3", "#04BC57", "#0E18AB", "#1194F3"];
+
+        new Chart("myChart1", {
+            type: "bar",
+            data: {
+                labels: sValues,
+                datasets: [{
+                    backgroundColor: barColor,
+                    data: tValues
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: "Sales Report"
+                },
+                scales: {
+                    xAxes: [{
+                        barThickness: 30, // number (pixels) or 'flex'
+                        maxBarThickness: 40 // number (pixels)
+                    }]
+                }
+            }
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

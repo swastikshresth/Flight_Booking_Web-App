@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="px-md-5">
+                <button class="navbar-toggler" type="button" style="border: none;outline:none;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse px-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house catg"></i>&nbsp;&nbsp;Home</a>
+                        </li>
+
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link active" href=""><i class="fa-solid fa-plane-up rotate catg"></i>&nbsp;&nbsp;Flights</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bed catg"></i>&nbsp;&nbsp;Hotels</a>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link" href=""><i class="fa-solid fa-taxi catg"></i>&nbsp;&nbsp;Cab</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa-solid fa-bus catg"></i>&nbsp;&nbsp;Bus</a>
+                        </li>
+
+                        <!-- <div class="d-lg-none d-md-none d-sm-block">
+                            <button type="button" class=" btn-sm btn login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                        </div> -->
+                    </ul>
+
+                    <div class="d-xl-block d-lg-none d-md-none d-none" style="margin-left:630px;">
+                        <button type="button" class=" btn-sm btn btn-outline-primary login-btn"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;LOGIN/SIGNUP</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+
+    <section class="px-2">
+        <div class="row mt-4 px-md-5">
+
+            <div class="col-lg-3 mb-3">
+                <div class="card ">
+                    <div class="px-4 py-3 ">
+                        <p class="mt-0 mb-0 card-title"><i class="fa-solid fa-plane-up rotate text-muted fs-6"></i>&nbsp;&nbsp;&nbsp;Payment Options </p>
+                    </div>
+                    <hr class="mt-0 mb-0 ">
+                    <section class="px-4 py-3 " style="background:#DCE4FF ">
+                        <div class="row ">
+                            <div class="col-2 pt-1">
+                                <!-- <div class="py-2 px-3 d-flex align-items-center justify-content-center " style="background-color: black; border-radius: 5px; ">
+                                    <i class="fa-solid fa-plane-departure text-white "></i>
+                                    <i class="fa-light fa-credit-card"></i>
+                                </div> -->
+                                <img src="assets/images/cred-card.svg" alt="">
+                            </div>
+                            <div class="col-10 ">
+                                <p class="mb-0 sub-title">Credit/Debit Card</p>
+                                <p class="mb-0 term">Rupay, Visa, Mastercard, Amex & more</p>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="mt-0 mb-0 ">
+                    <section class="px-4 py-3 ">
+                        <div class="row ">
+                            <div class="col-2 pt-1 ">
+                                <div class="py-1 px-3 d-flex align-items-center justify-content-center" style="background-color:#F8F9FA; border-radius: 5px; ">
+                                    <img src="assets/images/UPI.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-10 ">
+                                <p class="mb-0 sub-title">UPI</p>
+                                <p class="mb-0 term">Pay directly from your Bank Account
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="mt-0 mb-0 ">
+                    <section class="px-4 py-3 ">
+                        <div class="row ">
+                            <div class="col-2 pt-1 ">
+                                <div class="py-1 px-3 d-flex align-items-center justify-content-center" style="background-color:#F8F9FA; border-radius: 5px; ">
+                                    <img src="assets/images/bank.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-10 ">
+                                <p class="mb-0 sub-title">Net Banking</p>
+                                <p class="mb-0 term">Pay using your Bank Account Details
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+            </div>
+            <!-- ................Form card------------------------- -->
+            <div class="col-lg-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <p class="payment-headertext mt-2">Payment Details</p>
+                            <div class="row mt-4">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center bank-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-magnifying-glass ms-2"></i>
+                                            <input type="text" class="form-control" style="border: none;outline: none;" placeholder="UPI ID">
+                                        </div>
+                                        <div class="mt-3 dropdown-menu dropdown-menu-xl w-100" style="overflow:hidden;">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a class="dropdown-icon-item text-start" href="#">
+                                                        <span class="px-2 ps-3"><input type="radio" name="bank">
+                                                            &nbsp;
+                                                            <img src="assets/images/state-bank.svg" alt="">
+                                                          &nbsp;  State Bank Of India</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a class="dropdown-icon-item text-start" href="#">
+                                                        <span class="px-2 ps-3"><input type="radio" name="bank">
+                                                            &nbsp;
+                                                            <img src="assets/images/kotak.svg" alt="">
+                                                           &nbsp; State Bank Of India</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a class="dropdown-icon-item text-start" href="#">
+                                                        <span class="px-2 ps-3"><input type="radio" name="bank">
+                                                            &nbsp;
+                                                            <img src="assets/images/icici.svg" alt="">
+                                                           &nbsp; State Bank Of India</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a class="dropdown-icon-item text-start" href="#">
+                                                        <span class="px-2 ps-3"><input type="radio" name="bank">
+                                                            &nbsp;
+                                                            <img src="assets/images/icici.svg" alt="">
+                                                           &nbsp; State Bank Of India</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="term mb-0 mt-4">By continuing to pay, I understand and agree with the <a href="">privacy policy</a> and <a href="">terms of services</a> of Flying Nemo.</p>
+                            <div class="col-12 text-end mt-5 mb-3">
+                                <a href="" class="proceed-btn btn-block">Cancel Payment</a>
+                                <a href="e-ticket.html" class="paybtn">Pay Now</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- .....................filter...................... -->
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="px-4 py-3 d-flex">
+                        <img src="assets/images/tag.svg" class="img-fluiud" alt="">
+                        <p class="mt-0 mb-0 card-title ms-3">Fare Breakup</p>
+                    </div>
+                    <hr class="mt-0 mb-0 ">
+                    <div class="px-4 py-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0" style="cursor: pointer;" onclick="basefareFun()">Base Fare &nbsp;<i class="fa-solid fa-angle-down fa-xs "></i></h5>
+                            <h5 class="sub-title mb-0">₹ 5,000</h5>
+                        </div>
+                        <div class="my-3 d-none" id="base-fare">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 1,000</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 2,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between my-2 mb-3">
+                            <h5 class="sub-title mb-0" style="cursor: pointer;" onclick="taxesFun()">Taxes & Surcharges &nbsp;<i class="fa-solid fa-angle-down fa-xs "></i></h5>
+                            <h5 class="sub-title mb-0">₹ 5,000</h5>
+                        </div>
+                        <div class="my-3 d-none" id="taxes">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 1,000</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 2,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0"><b>Total Amount</b></h5>
+                            <h5 class="sub-title mb-0"><b>₹ 10,000</b></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="px-4 py-3 d-flex">
+                        <img src="assets/images/tag.svg" class="img-fluiud" alt="">
+                        <p class="mt-0 mb-0 card-title ms-3">Fare Breakup</p>
+                    </div>
+                    <hr class="mt-0 mb-0 ">
+                    <div class="px-4 py-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0" style="cursor: pointer;" onclick="basefareFun()">Base Fare &nbsp;<i class="fa-solid fa-angle-down fa-xs "></i></h5>
+                            <h5 class="sub-title mb-0">₹ 5,000</h5>
+                        </div>
+                        <div class="my-3 d-none" id="base-fare">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 1,000</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 2,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between my-2 mb-3">
+                            <h5 class="sub-title mb-0" style="cursor: pointer;" onclick="taxesFun()">Taxes & Surcharges &nbsp;<i class="fa-solid fa-angle-down fa-xs "></i></h5>
+                            <h5 class="sub-title mb-0">₹ 5,000</h5>
+                        </div>
+                        <div class="my-3 d-none" id="taxes">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 1,000</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="term mb-0">Adult(s) (1x2000)</p>
+                                <p class="term mb-0">₹ 2,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="sub-title mb-0"><b>Total Amount</b></h5>
+                            <h5 class="sub-title mb-0"><b>₹ 10,000</b></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="w-100" style="
+    background: linear-gradient(90deg, #4E4E4E 0%, #323232 100%);bottom:0;z-index: 200;position:relative; position: fixed;">
+        <div class="row px-5 py-2">
+            <div class="col-md-12">
+                <div class="container-fluid d-flex align-items-center justify-content-center">
+                    <div class="d-lg-flex align-items-center" id="clockdiv">
+                        <p class="text-white mb-0 term">Please complete your booking in : </p>
+                        <div class="d-flex align-items-center justify-content-center ms-2">
+                            <div class="clock-block">
+                                <span class="days"></span>
+                            </div>
+                            <div class="mx-2 clock-block">
+                                <span class="hours"></span>
+                            </div>
+                            <div class="clock-block">
+                                <span class="minutes"></span>
+                            </div>
+                            <div class="mx-2 clock-block">
+                                <span class="seconds"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            return {
+                'total': t,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + 15 * 60 * 1000); // 15 minutes
+        initializeClock('clockdiv', deadline);
+    </script>
+
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector('.days');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
+    </script>
+
+    <script>
+        function basefareFun() {
+            document.getElementById('base-fare').classList.toggle('d-none')
+        }
+
+        function taxesFun() {
+            document.getElementById('taxes').classList.toggle('d-none')
+        }
+    </script>
+</body>
+
+</html>
